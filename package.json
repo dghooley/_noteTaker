@@ -21,6 +21,7 @@
   "homepage": "https://github.com/dghooley/_noteTaker#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "generate-unique-id": "^2.0.1",
     "inquirer": "^8.2.0"
   }
 }
