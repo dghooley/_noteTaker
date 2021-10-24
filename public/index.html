@@ -21,7 +21,33 @@
       <a class="btn btn-primary btn-lg mt-4" href="/public/notes.html" role="button">Get Started</a>
     </div>
   </div>
-  <script src="/public/assets/js/index.js"></script>
+  <script src="/public/routes/apiRoutes/noteRoutes"></script>
+  <script type="text/javascript">
+
+    $(".submit").on("click", function (event) {
+      event.preventDefault();
+      var newNote = {
+        id: 0,
+        title: $("#title").val().trim(),
+        note: $("#note").val()
+      };
+
+      console.log(newNote);
+
+      $.post("/api/index", newNote,
+        function (data) {
+          if (data) {
+            alert("Your new note successfully saved!");
+          }
+          else {
+            alert("Sorry, your new note not saved!");
+          }
+          $("#title").val("");
+          $("#note").val("");
+        });
+    });
+
+  </script>
 </body>
 
 </html>
