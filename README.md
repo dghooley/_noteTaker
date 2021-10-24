@@ -1,1 +1,34 @@
-# _noteTaker
+# README _noteTaker
+
+### User Story
+* AS A small business owner
+* I WANT to be able to write and save notes
+* SO THAT I can organize my thoughts and keep track of tasks I need to complete
+
+
+### Acceptance Criteria
+* GIVEN a note-taking application
+* WHEN I open the Note Taker
+* THEN I am presented with a landing page with a link to a notes page
+* WHEN I click on the link to the notes page
+* THEN I am presented with a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+* WHEN I enter a new note title and the note’s text
+* THEN a Save icon appears in the navigation at the top of the page
+* WHEN I click on the Save icon
+* THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
+* WHEN I click on an existing note in the list in the left-hand column
+* THEN that note appears in the right-hand column
+* WHEN I click on the Write icon in the navigation at the top of the page
+* THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+
+#### Screenshot
+![Screen Shot 2021-10-24 at 11 21 06 AM](https://user-images.githubusercontent.com/29662632/138603093-593c1c95-aa5b-4eec-804e-49f5963ccd0d.png)
+
+#### Heroku
+https://whispering-mountain-18319.herokuapp.com/
+
+#### Live URL
+
+
+
+
