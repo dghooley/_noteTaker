@@ -1,7 +1,7 @@
-// const fs = require("fs");
 const express = require("express");
 const path = require('path');
-// var router = express.Router();
+// const router = express.Router();
+// const fs = require("fs");
 
 const PORT = process.env.PORT || 8081;
 const app = express();
