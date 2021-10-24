@@ -7,14 +7,14 @@ var $noteList = $(".list-container .list-group");
 var activeNote = {};
 var getNotes = function () {
   return $.ajax({
-    url: "/public/notes",
+    url: "/api/notes",
     method: "GET"
   });
 };
 
 var saveNote = function (note) {
   return $.ajax({
-    url: "/public/notes",
+    url: "/api/notes",
     data: note,
     method: "POST"
   });
@@ -22,7 +22,7 @@ var saveNote = function (note) {
 
 var deleteNote = function (id) {
   return $.ajax({
-    url:"/public/notes" + id,
+    url:"/api/notes" + id,
     method: "DELETE"
   });
 };
@@ -42,7 +42,7 @@ var renderActiveNote = function () {
   $noteText.val("");
 }
 
-// Show an element
+/* Show an element
 const show = (elem) => {
   elem.style.display = 'inline';
 };
@@ -101,12 +101,13 @@ const renderActiveNote = () => {
     noteText.value = '';
   }
 };
-
+*/
 var handleNoteSave = function () {
   var newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
   };
+
   saveNote(newNote).then(function (data) {
     getAndRenderNotes();
     renderActiveNote();
@@ -144,13 +145,14 @@ var handleNewNoteView = function () {
   renderActiveNote();
 };
 
-const handleRenderSaveBtn = function () {
+/*const handleRenderSaveBtn = function () {
   if (!$noteTitle.val().trim() || !$noteText.val().trim()) {
     $saveNoteBtn.hide();
   } else {
     $saveNoteBtn.show();
   }
 };
+*/
 
 // Render the list of note titles
 var renderNoteList = function (notes) {
