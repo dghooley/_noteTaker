@@ -7,14 +7,14 @@ var $noteList = $(".list-container .list-group");
 var activeNote = {};
 var getNotes = function () {
   return $.ajax({
-    url: "/api/notes",
+    url: "/public/notes",
     method: "GET"
   });
 };
 
 var saveNote = function (note) {
   return $.ajax({
-    url: "/api/notes",
+    url: "/public/notes",
     data: note,
     method: "POST"
   });
@@ -22,7 +22,7 @@ var saveNote = function (note) {
 
 var deleteNote = function (id) {
   return $.ajax({
-    url:"api/notes/" + id,
+    url:"/public/notes" + id,
     method: "DELETE"
   });
 };
@@ -56,7 +56,7 @@ const hide = (elem) => {
 let activeNote = {};
 
 const getNotes = () =>
-  fetch('/api/notes', {
+  fetch('/public/notes', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ const getNotes = () =>
   });
 
 const saveNote = (note) =>
-  fetch('/api/notes', {
+  fetch('/public/notes', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const saveNote = (note) =>
   });
 
 const deleteNote = (id) =>
-  fetch(`/api/notes/${id}`, {
+  fetch(`/public/notes${id}`, {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
