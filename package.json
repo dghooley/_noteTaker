@@ -20,6 +20,7 @@
   "homepage": "https://github.com/dghooley/_noteTaker#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "inquirer": "^8.2.0"
+    "inquirer": "^8.2.0",
+    "uuid": "^8.3.2"
   }
 }
