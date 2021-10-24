@@ -8,8 +8,12 @@ router.post("/notes", ({ body }, res) => {
     console.log("DATABASE", db)
 })
 
-router.get("/notes")
+router.get("/notes", (req, res) => {
+    res.json(notes);
+});
 
-router.delete('/notes/:id')
+router.delete('/notes/:id', (req, res) => {
+
+})
 
 module.exports = router;
